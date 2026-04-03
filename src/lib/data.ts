@@ -182,18 +182,19 @@ export const skillCategories: SkillCategory[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { name: "GitHub", url: "https://github.com", icon: "github" },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: "linkedin" },
-  { name: "Twitter", url: "https://twitter.com", icon: "twitter" },
-  { name: "Dribbble", url: "https://dribbble.com", icon: "dribbble" },
+  { name: "GitHub", url: "https://github.com/Hitanimes55", icon: "github" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/reddaiah-dasuru-689923400/", icon: "linkedin" },
+  { name: "Twitter", url: "https://x.com/Reddydasuri", icon: "twitter" },
+  { name: "Dribbble", url: "https://dribbble.com/reddaiah-dasuru", icon: "dribbble" },
 ];
 
 export const personalInfo = {
-  name: "Alex Chen",
+  name: "Hitanimes55",
+  fullName: "Reddaiah Dasuri",
   title: "Frontend Developer & UI Designer",
-  bio: "I craft digital experiences that blend beautiful design with seamless functionality. With 6+ years of experience building products for startups and Fortune 500 companies, I specialize in creating interfaces that users love.",
-  email: "hello@alexchen.dev",
-  location: "San Francisco, CA",
+  bio: "I'm a passionate Frontend Developer and UI Designer with a keen eye for creating beautiful, user-friendly digital experiences. I specialize in building modern web applications using React, Next.js, and Tailwind CSS. Currently exploring the intersection of design and development to create products that make a difference.",
+  email: "hitanimes55@gmail.com",
+  location: "Kadapa, Andhra Pradesh",
   available: true,
 };
 

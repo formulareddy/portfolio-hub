@@ -44,8 +44,8 @@ export default function Skills() {
 
   return (
     <section id="skills" className="py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-violet-600/10 rounded-full blur-[150px]" />
-      <div className="absolute top-20 right-0 w-64 h-64 bg-pink-600/10 rounded-full blur-[120px]" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-violet-500/10 rounded-full blur-[150px]" />
+      <div className="absolute top-20 right-0 w-64 h-64 bg-pink-500/10 rounded-full blur-[120px]" />
       
       <div className="max-w-7xl mx-auto px-6 relative">
         <SectionHeader
@@ -53,7 +53,7 @@ export default function Skills() {
           subtitle="Technologies and tools I work with daily"
         />
 
-        <div ref={ref} className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div ref={ref} className="grid md:grid-cols-3 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.name}
@@ -62,13 +62,13 @@ export default function Skills() {
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               className="relative group"
             >
-              <div className="absolute -inset-0.5 bg-gradient-to-br from-violet-600/50 via-purple-600/30 to-pink-600/50 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
-              <div className="relative bg-background-secondary rounded-2xl p-6 border border-border">
+              <div className="absolute -inset-0.5 bg-gradient-to-br from-violet-500/50 via-purple-500/30 to-pink-500/50 rounded-2xl blur opacity-0 group-hover:opacity-100 transition duration-500" />
+              <div className="relative bg-white dark:bg-[#141414] rounded-2xl p-6 border border-gray-200 dark:border-gray-800 h-full">
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-violet-600/20 to-purple-600/20 text-accent border border-accent/20">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 text-violet-500 border border-violet-500/20">
                     {iconMap[category.name]}
                   </div>
-                  <h3 className="text-xl font-bold text-foreground">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                     {category.name}
                   </h3>
                 </div>
@@ -86,18 +86,18 @@ export default function Skills() {
                     >
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center gap-2">
-                          <span className="text-accent/70">
+                          <span className="text-violet-500/70">
                             {skillIcons[skill.name]}
                           </span>
-                          <span className="text-sm font-medium text-text-secondary">
+                          <span className="text-sm font-medium text-gray-600 dark:text-gray-400">
                             {skill.name}
                           </span>
                         </div>
-                        <span className="text-xs font-medium text-accent bg-accent/10 px-2 py-1 rounded-full">
+                        <span className="text-xs font-medium text-violet-500 bg-violet-500/10 px-2 py-1 rounded-full">
                           {skill.level}%
                         </span>
                       </div>
-                      <div className="h-2 bg-background-tertiary rounded-full overflow-hidden">
+                      <div className="h-2 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={isVisible ? { width: `${skill.level}%` } : {}}
@@ -106,7 +106,7 @@ export default function Skills() {
                             delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.3,
                             ease: [0.22, 1, 0.36, 1],
                           }}
-                          className="h-full bg-gradient-to-r from-violet-600 via-purple-500 to-pink-500 rounded-full relative"
+                          className="h-full bg-gradient-to-r from-violet-500 via-purple-500 to-pink-500 rounded-full relative"
                         >
                           <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent rounded-full" />
                         </motion.div>

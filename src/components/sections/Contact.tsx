@@ -53,12 +53,13 @@ export default function Contact() {
     setIsSubmitting(false);
     setIsSubmitted(true);
     setFormState({ name: "", email: "", message: "" });
+    setErrors({});
   };
 
   return (
     <section id="contact" className="py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-t from-background-secondary/50 via-transparent to-transparent -z-10" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-600/10 rounded-full blur-[200px]" />
+      <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent dark:from-[#0a0a0a] dark:via-transparent dark:to-transparent -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-violet-500/10 rounded-full blur-[200px]" />
       
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
@@ -77,21 +78,21 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div className="space-y-6">
+            <div className="space-y-4">
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={isVisible ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.1 }}
-                className="flex items-start gap-4 p-4 rounded-xl bg-background-secondary border border-border"
+                className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#141414] border border-gray-200 dark:border-gray-800"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-violet-600/20 to-purple-600/20 text-accent border border-accent/20">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 text-violet-500 border border-violet-500/20">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-text-tertiary mb-1">Email</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-500 mb-1">Email</p>
                   <a
                     href={`mailto:${personalInfo.email}`}
-                    className="text-foreground hover:text-accent transition-colors font-medium"
+                    className="hover:text-violet-500 transition-colors font-medium text-gray-900 dark:text-white"
                   >
                     {personalInfo.email}
                   </a>
@@ -102,14 +103,14 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={isVisible ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 0.2 }}
-                className="flex items-start gap-4 p-4 rounded-xl bg-background-secondary border border-border"
+                className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-[#141414] border border-gray-200 dark:border-gray-800"
               >
-                <div className="p-3 rounded-xl bg-gradient-to-br from-violet-600/20 to-purple-600/20 text-accent border border-accent/20">
+                <div className="p-3 rounded-xl bg-gradient-to-br from-violet-500/20 to-purple-500/20 text-violet-500 border border-violet-500/20">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <p className="text-sm text-text-tertiary mb-1">Location</p>
-                  <p className="text-foreground font-medium">{personalInfo.location}</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-500 mb-1">Location</p>
+                  <p className="font-medium text-gray-900 dark:text-white">{personalInfo.location}</p>
                 </div>
               </motion.div>
             </div>
@@ -118,11 +119,11 @@ export default function Contact() {
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.3 }}
-              className="p-6 bg-gradient-to-br from-violet-600/10 via-purple-600/5 to-pink-600/10 rounded-2xl border border-accent/20"
+              className="p-6 bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-pink-500/10 rounded-2xl border border-violet-500/20"
             >
-              <p className="text-text-secondary leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 I&apos;m currently{" "}
-                <span className="text-accent font-semibold">
+                <span className="text-violet-500 font-semibold">
                   {personalInfo.available ? "available for freelance work" : "unavailable"}
                 </span>
                 . Whether you have a project in mind or just want to chat about
@@ -142,7 +143,7 @@ export default function Contact() {
                   href={`https://${social}.com`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl bg-background-secondary border border-border text-text-secondary hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
+                  className="p-3 rounded-xl bg-white dark:bg-[#141414] border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 hover:text-violet-500 hover:border-violet-500/30 transition-all duration-300"
                 >
                   {socialIcons[social]}
                 </a>
@@ -159,15 +160,15 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-gradient-to-br from-violet-600/10 to-purple-600/10 border border-accent/30 rounded-2xl p-8 text-center"
+                className="bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/30 rounded-2xl p-8 text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-violet-600 to-purple-600 flex items-center justify-center shadow-glow">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center shadow-lg shadow-violet-500/25">
                   <Send className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
+                <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
                   Message Sent!
                 </h3>
-                <p className="text-text-secondary">
+                <p className="text-gray-600 dark:text-gray-400">
                   Thank you for reaching out. I&apos;ll get back to you within 24
                   hours.
                 </p>
@@ -213,7 +214,7 @@ export default function Contact() {
                   type="submit"
                   size="lg"
                   isLoading={isSubmitting}
-                  className="w-full shadow-glow hover:shadow-glow-lg"
+                  className="w-full"
                 >
                   Send Message
                 </Button>

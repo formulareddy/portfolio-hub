@@ -14,10 +14,10 @@ export function Badge({ children, className }: BadgeProps) {
       whileHover={{ scale: 1.05 }}
       className={cn(
         "inline-flex items-center px-3 py-1 rounded-full text-sm font-medium",
-        "bg-background-tertiary text-text-secondary",
-        "border border-border",
+        "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300",
+        "border border-gray-200 dark:border-gray-700",
         "transition-all duration-200",
-        "hover:border-accent/30",
+        "hover:border-violet-500/30",
         className
       )}
     >

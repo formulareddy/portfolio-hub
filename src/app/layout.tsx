@@ -17,21 +17,23 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Chen | Frontend Developer & UI Designer",
+  title: "Hitanimes55 | Frontend Developer & UI Designer",
   description:
-    "Portfolio of Alex Chen, a frontend developer and UI designer crafting beautiful digital experiences.",
+    "Portfolio of Reddaiah Dasuri, a passionate Frontend Developer and UI Designer crafting beautiful digital experiences.",
   keywords: [
     "frontend developer",
     "UI designer",
     "React",
     "Next.js",
     "portfolio",
+    "Reddaiah Dasuri",
+    "Hitanimes55",
   ],
-  authors: [{ name: "Alex Chen" }],
+  authors: [{ name: "Reddaiah Dasuri" }],
   openGraph: {
-    title: "Alex Chen | Frontend Developer & UI Designer",
+    title: "Hitanimes55 | Frontend Developer & UI Designer",
     description:
-      "Portfolio of Alex Chen, a frontend developer and UI designer crafting beautiful digital experiences.",
+      "Portfolio of Reddaiah Dasuri, a passionate Frontend Developer and UI Designer crafting beautiful digital experiences.",
     type: "website",
   },
 };
@@ -42,11 +44,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
       >
-        <div className="noise-overlay" />
         <Navbar />
         <main>{children}</main>
         <Footer />

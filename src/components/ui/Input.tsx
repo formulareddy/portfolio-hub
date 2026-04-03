@@ -13,17 +13,19 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="w-full">
         {label && (
-          <label className="block text-sm font-medium text-text-secondary mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">
             {label}
           </label>
         )}
         <input
           ref={ref}
           className={cn(
-            "w-full bg-background-secondary border border-border rounded-xl py-3 px-4 text-foreground transition-all duration-200",
-            "placeholder:text-text-tertiary",
-            "focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20",
-            error ? "border-red-500 focus:border-red-500 focus:ring-red-500/20" : "border-border",
+            "w-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl py-3 px-4",
+            "text-gray-900 dark:text-white",
+            "placeholder:text-gray-400 dark:placeholder:text-gray-500",
+            "focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20",
+            "transition-all duration-200",
+            error ? "border-red-500 focus:border-red-500 focus:ring-red-500/20" : "",
             className
           )}
           {...props}
@@ -47,17 +49,19 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <div className="w-full">
         {label && (
-          <label className="block text-sm font-medium text-text-secondary mb-2">
+          <label className="block text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">
             {label}
           </label>
         )}
         <textarea
           ref={ref}
           className={cn(
-            "w-full bg-background-secondary border border-border rounded-xl py-3 px-4 text-foreground transition-all duration-200 resize-none min-h-[120px]",
-            "placeholder:text-text-tertiary",
-            "focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20",
-            error ? "border-red-500 focus:border-red-500 focus:ring-red-500/20" : "border-border",
+            "w-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl py-3 px-4",
+            "text-gray-900 dark:text-white",
+            "placeholder:text-gray-400 dark:placeholder:text-gray-500",
+            "focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20",
+            "transition-all duration-200 resize-none min-h-[120px]",
+            error ? "border-red-500 focus:border-red-500 focus:ring-red-500/20" : "",
             className
           )}
           {...props}
